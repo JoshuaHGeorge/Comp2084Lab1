@@ -1,0 +1,19 @@
+﻿@model IEnumerable<LowballersV2.Models.Category>
+
+@{
+    ViewData["Title"] = "Shop the Lowballers Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<ul>
+    @*<li<a asp-controller="Store" asp-action="Browse" asp-route-category="Category 1">Catagory 1</a></li>
+        <li<a asp-controller="Store" asp-action="Browse" asp-route-category="Category 2">Catagory 2</a></li>
+        <li<a asp-controller="Store" asp-action="Browse" asp-route-category="Category 3">Catagory 3</a></li>*@
+
+    @foreach (var c in Model)
+    {
+        <li ><a asp-controller="Store" asp-action="Browse" asp-route-category="@c.Name">@c.Name</a></li>
+    }
+</ul>
